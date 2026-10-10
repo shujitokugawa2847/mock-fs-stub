@@ -51,3 +51,10 @@ entries. If you need alphabetical, sort the result yourself.
 `mtimeMs` comes from the clock function passed to the constructor, defaulting
 to `() => 0`. Pass your own fake clock in tests; never assert against the
 machine's wall clock.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
