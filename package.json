@@ -1,6 +1,6 @@
 {
   "name": "mock-fs-stub",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides an in-memory filesystem stub implementing standard Node fs interfaces for testing file operations.",
   "type": "module",
   "main": "src/index.js",
